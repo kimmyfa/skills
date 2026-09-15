@@ -1,0 +1,61 @@
+{
+  "skill_name": "speech-paper-daily",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我找今天最新的语音论文",
+      "expected_output": "搜索 arXiv cs.SD 和 eess.AS 分类，获取当天论文列表，精读后写入腾讯文档",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "搜一下最新的 TTS 论文",
+      "expected_output": "从 arXiv 搜索 TTS 相关论文，精读后输出技术方案、实验结果、评分",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "今天有什么语音增强论文吗？",
+      "expected_output": "搜索语音增强相关论文，精读后写入腾讯文档",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "帮我看看最近有什么 ASR 的预印本",
+      "expected_output": "从 arXiv 搜索 ASR 论文，精读后输出分析",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "语音论文速递",
+      "expected_output": "执行完整的论文搜索、精读、写入腾讯文档流程",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "帮我写一个 Python 脚本",
+      "expected_output": "不应该触发此 skill",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "帮我分析这个 PDF 文件",
+      "expected_output": "不应该触发此 skill（除非 PDF 是语音论文）",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "帮我看看最新的机器学习论文",
+      "expected_output": "不应该触发此 skill（范围太广，不是特指语音）",
+      "assertions": [],
+      "files": []
+    }
+  ]
+}

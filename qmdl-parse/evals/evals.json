@@ -1,0 +1,26 @@
+{
+  "skill_name": "qmdl-parse",
+  "evals": [
+    {
+      "id": 1,
+      "name": "default-subset-extraction",
+      "prompt": "帮我解析 /Users/kimmy/Documents/projects/Dataprepro/diag_logfile_08_27_1926_02_49_10_468894_idx00.qmdl/diag_logfile_08_27_1926_02_49_10_468894_idx00.qmdl 这个qmdl文件，按0902文件夹里那种约定输出逐声道wav（默认模式）",
+      "expected_output": "调用 qmdl-parse 技能，运行 extract_qmdl.py 默认模式，输出与 0902 参考一致命名的 8 个逐声道 wav（2C2 4ch + 282 2ch + 081 2ch），命名含端口 0x411/0x410，另生成 messages.txt 日志",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "all-streams-extraction",
+      "prompt": "这个qmdl里有隐藏的音频流吗？用 --all 模式把 /Users/kimmy/Documents/projects/Dataprepro/diag_logfile_08_27_1926_02_49_10_468894_idx00.qmdl/diag_logfile_08_27_1926_02_49_10_468894_idx00.qmdl 里所有的音频流都提取出来看看有哪些",
+      "expected_output": "调用 qmdl-parse 技能 --all 模式，输出全部（41个）逐声道 wav，覆盖 0x1531/0x1532/0x1533 各模块各端口声道，并输出 messages.txt",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "log-only-report",
+      "prompt": "这个文件里有没有能看的日志？/Users/kimmy/Documents/projects/Dataprepro/diag_logfile_08_27_1926_02_49_10_468894_idx00.qmdl/diag_logfile_08_27_1926_02_49_10_468894_idx00.qmdl 是啥内容，把日志文本给我",
+      "expected_output": "识别为 qmdl 诊断文件，调用 qmdl-parse 技能生成 messages.txt（解码 0x79 modem 日志文本），并简要说明文件构成（音频流+日志）",
+      "files": []
+    }
+  ]
+}
